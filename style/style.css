@@ -9,10 +9,6 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 .container {
   max-width: 1180px;
   margin: 0 auto;
@@ -25,7 +21,7 @@ a {
 
 body {
   background: #282828;
-  width: 100%;
+  /* width: 100%; */
   font-family: 'Cera Compact Pro', sans-serif;
   color: #e5e5e5;
 }
@@ -158,16 +154,15 @@ body {
   }
 }
 
+.promo{
+  padding: 30px 0;
+}
 .main {
   width: 400px;
   height: 100%;
   padding: 5px;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 95%);
   text-transform: uppercase;
-  overflow: hidden;
+  margin: 30px auto;
 }
 
 .main__text1,
@@ -245,8 +240,8 @@ body {
 }
 
 .footer {
-  margin-top: 50px;
-  height: 100px;
+  margin-top: 100px;
+  height: 80px;
   color: #e5e5e5;
   text-align: center;
   position: relative;
@@ -266,7 +261,6 @@ body {
   height: 60px;
   background-image: url("../assets/icon/css_sprites.png");
   background-size: 100%;
-  margin-bottom: 10px;
 }
 
 .social__fb {
