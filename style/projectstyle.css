@@ -1,0 +1,186 @@
+.mainProject {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 13%);
+}
+
+.title__project {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 30px;
+  grid-template-areas: "title bigpic" "text firstRowPic" "button secondRowPic";
+}
+
+
+.title {
+  grid-area: title;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+.title span {
+  font-size: 22px;
+}
+
+.text {
+  grid-area: text;
+}
+
+.more__project {
+  grid-area: button;
+}
+
+.btn__more {
+  padding: 20px 30px;
+  border: 1px solid #e6c574;
+  border-radius: 35px;
+  font-size: 16px;
+  color: #e5e5e5;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.btn__more:hover {
+  box-shadow: 0 0 5px 0 #e6c574;
+}
+
+.bigpic {
+  height: 205px;
+  grid-area: bigpic;
+  background-image: url("../assets/image/bigpic.png");
+  background-repeat: no-repeat;
+  background-position: 22%;
+}
+
+.bigpic img:hover {
+  background-color: #151515;
+
+
+}
+
+.firstRowPic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-template-areas: "pic1 pic2 pic3";
+  grid-area: firstRowPic;
+}
+
+.pic1 {
+  grid-area: pic1;
+  background-image: url("../assets/image/pic1.png");
+  background-repeat: no-repeat;
+  background-position: 22%;
+}
+
+.pic2 {
+  grid-area: pic2;
+  background-image: url("../assets/image/pic2.png");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.pic3 {
+  grid-area: pic3;
+  background-image: url("../assets/image/pic3.png");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.secondRowPic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-template-areas: "pic4 pic5 pic6";
+  grid-area: secondRowPic;
+}
+
+.pic4 {
+  grid-area: pic4;
+  background-image: url("../assets/image/pic4.png");
+  background-repeat: no-repeat;
+  background-position: 10%;
+}
+
+.pic5 {
+  grid-area: pic5;
+  background-image: url("../assets/image/pic5.png");
+  background-repeat: no-repeat;
+  background-position: 10%;
+}
+
+.pic6 {
+  grid-area: pic6;
+  background-image: url("../assets/image/pic6.png");
+  background-repeat: no-repeat;
+  background-position: 10%;
+
+}
+
+.pic {
+  background-color: #e5e5e5;
+  background-size: cover;
+  box-shadow: inset 4px 0 0 0 #e6c574;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pic p {
+  display: none;
+}
+
+.pic:hover p {
+  display: block;
+  background-color: #e6c574;
+  padding: 100px 10px 10px;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  animation-name: main-text12;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@keyframes main-text12 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@media(max-width: 1150px){
+  .mainProject{
+    transform: translate(-50%, 5%);
+  }
+  .title__project {
+    grid-template-columns: 1fr;
+    grid-template-rows: .6fr .7fr 1fr 1fr 1fr 1fr;
+    gap: 10px 20px;
+    grid-template-areas: "title" "text" "bigpic" "firstRowPic" "secondRowPic" "button";
+  }
+  .text{
+    padding: 20px 0;
+  }
+  .bigpic{
+    height: 190px;
+  }
+  .more__project{
+    text-align: center;
+    padding: 40px 0 0 0;
+  }
+}
